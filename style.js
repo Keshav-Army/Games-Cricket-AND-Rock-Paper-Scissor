@@ -157,7 +157,7 @@ let ball = () => {
 }
 // =================BAT Choice=================
 let stump = () => {
-    document.querySelector("#userChoice2").innerText = "You have Chosen Bat |||";
+    document.querySelector("#userChoice2").innerText = "You have Chosen Stump |||";
 
     let computerChoice2;
     randomNumver = Math.random() * 3;
