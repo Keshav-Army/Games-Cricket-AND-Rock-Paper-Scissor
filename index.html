@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+
+    <!-- Bootstrap CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div id="game1">
+                    <h1 class="rpsHeading">Rock-Paper-Scissors Game</h1>
+                    <div>
+                        <button onclick="rock()">Rock ✊</button>
+                        <button onclick="paper()">Paper ✋</button>
+                        <button onclick="scissor()">Scissors ✌️</button>
+                    </div>
+
+                    <div id="outputTextGame1">
+                        <p>User Choice= <span id="userChoice1"></span></p>
+                        <p>Computer Choice= <span id="computerChoice1"></span></p>
+                        <p>Result= <span id="finelResult1"></span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div id="game2">
+                    <h1 class="cricketHeading">Cricket Game</h1>
+                    <div>
+                        <button onclick="bat()">Bat 🏏</button>
+                        <button onclick="ball()">Ball ⚾</button>
+                        <button onclick="stump()">Stump |||</button>
+                    </div>
+
+                    <div id="outputTextGame2">
+                        <p>User Choice = <span id="userChoice2"></span></p>
+                        <p>Computer Choice = <span id="computerChoice2"></span></p>
+                        <p>Result = <span id="finelResult2"></span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy;Copyright All Rights Reserved by <a href="https://keshav-sharma.netlify.app">KESHAV SHARMA</a>
+    </footer>
+    <script src="style.js"></script>
+</body>
+
+</html>
