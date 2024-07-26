@@ -1,9 +1,7 @@
-// Game Rock Paper Scissor Start============================================================================
-// =================ROCK Choice=================
-let rock = () => {
-    document.querySelector("#userChoice1").innerText = "You have Chosen Rock ✊";
+// THIS IS GLOBAL FUNCTION OF COUMPUTERCHOICE======
+let computerChoice1;
 
-    let computerChoice1;
+let finerlComputerChoice1 = () => {
     randomNumver = Math.random() * 3;
     if (randomNumver > 0 && randomNumver <= 1) {
         computerChoice1 = "Rock";
@@ -17,6 +15,20 @@ let rock = () => {
         computerChoice1 = "Scissor";
         document.querySelector("#computerChoice1").innerText = 'Computer choice is Scissor ✌️';
     }
+}
+
+
+
+
+// Game Rock Paper Scissor Start============================================================================
+// =================ROCK Choice=================
+let rock = () => {
+    document.querySelector("#userChoice1").innerText = "You have Chosen Rock ✊";
+
+    // Function is Invoke here
+    finerlComputerChoice1();
+
+
     // ==============================
     if (computerChoice1 === 'Rock') {
         document.querySelector("#finelResult1").innerText = "Match Drow";
@@ -33,20 +45,9 @@ let rock = () => {
 let paper = () => {
     document.querySelector("#userChoice1").innerText = "You have Chosen Paper ✋";
 
-    let computerChoice1;
-    randomNumver = Math.random() * 3;
-    if (randomNumver > 0 && randomNumver <= 1) {
-        computerChoice1 = "Rock";
-        document.querySelector("#computerChoice1").innerText = 'Computer choice is Rock ✊';
-    }
-    else if (randomNumver > 1 && randomNumver <= 2) {
-        computerChoice1 = "Paper";
-        document.querySelector("#computerChoice1").innerText = 'Computer choice is Paper ✋';
-    }
-    else if (randomNumver > 2 && randomNumver <= 3) {
-        computerChoice1 = "Scissor";
-        document.querySelector("#computerChoice1").innerText = 'Computer choice is Scissor ✌️';
-    }
+    // Function is Invoke here
+    finerlComputerChoice1();
+
     // ==============================
     if (computerChoice1 === 'Rock') {
         document.querySelector("#finelResult1").innerText = "User Won";
@@ -65,20 +66,9 @@ let paper = () => {
 let scissor = () => {
     document.querySelector("#userChoice1").innerText = "You have Chosen Scissor ✌️";
 
-    let computerChoice1;
-    randomNumver = Math.random() * 3;
-    if (randomNumver > 0 && randomNumver <= 1) {
-        computerChoice1 = "Rock";
-        document.querySelector("#computerChoice1").innerText = 'Computer choice is Rock ✊';
-    }
-    else if (randomNumver > 1 && randomNumver <= 2) {
-        computerChoice1 = "Paper";
-        document.querySelector("#computerChoice1").innerText = 'Computer choice is Paper ✋';
-    }
-    else if (randomNumver > 2 && randomNumver <= 3) {
-        computerChoice1 = "Scissor";
-        document.querySelector("#computerChoice1").innerText = 'Computer choice is Scissor ✌️';
-    }
+    // Function is Invoke here
+    finerlComputerChoice1();
+
     // ==============================
     if (computerChoice1 === 'Rock') {
         document.querySelector("#finelResult1").innerText = "Coumputer Has Won";
