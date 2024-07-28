@@ -1,3 +1,28 @@
+// THIS IS SCORE OBJECT FOR MEJORMENT THE SCORE //Game First
+let score = {
+    win1: 0,
+    lost1: 0,
+    tie1: 0,
+}
+
+document.querySelector("#win1").innerText = score.win1;
+document.querySelector("#lost1").innerText = score.lost1;
+document.querySelector("#tie1").innerText = score.tie1;
+
+// THIS IS SCORE2 OBJECT FOR MEJORMENT THE SCORE //Game Second
+let score2 = {
+    win2: 0,
+    lost2: 0,
+    tie2: 0,
+}
+
+document.querySelector("#win2").innerText = score2.win2;
+document.querySelector("#lost2").innerText = score2.lost2;
+document.querySelector("#tie2").innerText = score2.tie2;
+
+
+
+
 // THIS IS GLOBAL FUNCTION OF COUMPUTERCHOICE======
 let computerChoice1;
 
@@ -31,14 +56,20 @@ let rock = () => {
 
     // ==============================
     if (computerChoice1 === 'Rock') {
+        score.tie1++;
         document.querySelector("#finelResult1").innerText = "Match Drow";
+        document.querySelector("#tie1").innerText = score.tie1;
     }
 
     else if (computerChoice1 === 'Paper') {
+        score.lost1++;
         document.querySelector("#finelResult1").innerText = "Coumputer Has Won";
+        document.querySelector("#lost1").innerText = score.lost1;
     }
     else if (computerChoice1 === 'Scissor') {
+        score.win1++;
         document.querySelector("#finelResult1").innerText = "User Won";
+        document.querySelector("#win1").innerText = score.win1;
     }
 }
 // =================PAPER Choice=================
@@ -84,6 +115,18 @@ let scissor = () => {
 // Game Rock Paper Scissor End=========================================================================================
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Game Cricket Start=========================================================================================
 // =================BAT Choice=================
 let bat = () => {
@@ -105,14 +148,21 @@ let bat = () => {
     }
     // ==============================
     if (computerChoice2 === 'Bat') {
+        score2.tie2++;
         document.querySelector("#finelResult2").innerText = "Match Tie";
+        document.querySelector("#tie2").innerText = score2.tie2;
     }
 
     else if (computerChoice2 === 'Ball') {
+        score2.win2++;
         document.querySelector("#finelResult2").innerText = "User Won";
+        document.querySelector("#win2").innerText = score2.win2;
+
     }
     else if (computerChoice2 === 'Stump') {
+        score2.lost2++;
         document.querySelector("#finelResult2").innerText = "Coumputer Has Won";
+        document.querySelector("#lost2").innerText = score2.lost2;
     }
 }
 // =================BALL Choice=================
@@ -135,14 +185,20 @@ let ball = () => {
     }
     // ==============================
     if (computerChoice2 === 'Bat') {
+        score2.lost2++;
         document.querySelector("#finelResult2").innerText = "Coumputer Has Won";
+        document.querySelector("#lost2").innerText = score2.lost2;
     }
 
     else if (computerChoice2 === 'Ball') {
+        score2.tie2++;
         document.querySelector("#finelResult2").innerText = "Match Tie";
+        document.querySelector("#tie2").innerText = score2.tie2;
     }
     else if (computerChoice2 === 'Stump') {
+        score2.win2++;
         document.querySelector("#finelResult2").innerText = "User Won";
+        document.querySelector("#win2").innerText = score2.win2;
     }
 }
 // =================BAT Choice=================
@@ -165,14 +221,20 @@ let stump = () => {
     }
     // ==============================
     if (computerChoice2 === 'Bat') {
+        score2.win2++;
         document.querySelector("#finelResult2").innerText = "User Won";
+        document.querySelector("#win2").innerText = score2.win2;
     }
 
     else if (computerChoice2 === 'Ball') {
+        score2.lost2++;
         document.querySelector("#finelResult2").innerText = "Coumputer Has Won";
+        document.querySelector("#lost2").innerText = score2.lost2;
     }
     else if (computerChoice2 === 'Stump') {
+        score2.tie2++;
         document.querySelector("#finelResult2").innerText = "Match Tie";
+        document.querySelector("#tie2").innerText = score2.tie2;
     }
 }
 // Game Cricket End=========================================================================================

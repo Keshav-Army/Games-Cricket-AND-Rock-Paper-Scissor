@@ -106,3 +106,30 @@ footer {
     color: white;
     padding: 10px;
 }
+
+
+
+/* Score majorment */
+.won {
+    background-color: #008000c7;
+    color: white;
+    padding: 9px;
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.lost {
+    background-color: rgba(255, 0, 0, 0.849);
+    color: white;
+    padding: 9px;
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.tie {
+    background-color: rgb(167 167 0);
+    color: white;
+    padding: 9px;
+    border-radius: 4px;
+    margin-right: 12px;
+}
