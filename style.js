@@ -81,14 +81,20 @@ let paper = () => {
 
     // ==============================
     if (computerChoice1 === 'Rock') {
+        score.win1++;
         document.querySelector("#finelResult1").innerText = "User Won";
+        document.querySelector("#win1").innerText = score.win1;
     }
 
     else if (computerChoice1 === 'Paper') {
+        score.tie1++;
         document.querySelector("#finelResult1").innerText = "Match Drow";
+        document.querySelector("#tie1").innerText = score.tie1;
     }
     else if (computerChoice1 === 'Scissor') {
+        score.lost1++;
         document.querySelector("#finelResult1").innerText = "Coumputer Has Won";
+        document.querySelector("#lost1").innerText = score.lost1;
     }
 }
 
@@ -102,14 +108,20 @@ let scissor = () => {
 
     // ==============================
     if (computerChoice1 === 'Rock') {
+        score.lost1++;
         document.querySelector("#finelResult1").innerText = "Coumputer Has Won";
+        document.querySelector("#lost1").innerText = score.lost1;
     }
 
     else if (computerChoice1 === 'Paper') {
+        score.win1++;
         document.querySelector("#finelResult1").innerText = "User Won";
+        document.querySelector("#win1").innerText = score.win1;
     }
     else if (computerChoice1 === 'Scissor') {
+        score.tie1++;
         document.querySelector("#finelResult1").innerText = "Match Drow";
+        document.querySelector("#tie1").innerText = score.tie1;
     }
 }
 // Game Rock Paper Scissor End=========================================================================================
