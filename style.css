@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: black;
     color: white;
 }
@@ -15,7 +15,8 @@ body{
         font-size: 14px;
     }
 
-    .col-md-6 #outputTextGame1,.col-md-6 #outputTextGame2 {
+    .col-md-6 #outputTextGame1,
+    .col-md-6 #outputTextGame2 {
         border: 1px solid;
         width: 32rem;
         text-align: left;
@@ -132,4 +133,15 @@ footer {
     padding: 9px;
     border-radius: 4px;
     margin-right: 12px;
+}
+
+
+/* Score Reset Button */
+.reest-btn1,
+.reest-btn2 {
+    margin: 10px auto;
+    padding: 5px 25px;
+    font-size: 13px;
+    border-radius: 36px;
+    background-color: white;
 }

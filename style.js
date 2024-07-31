@@ -1,20 +1,36 @@
-// THIS IS SCORE OBJECT FOR MEJORMENT THE SCORE //Game First
-let score = {
+let scoreStr = localStorage.getItem("Score");
+let score = JSON.parse(scoreStr) || {
     win1: 0,
     lost1: 0,
     tie1: 0,
 }
 
+// THIS IS SCORE OBJECT FOR MEJORMENT THE SCORE //Game First
+// let score = {
+//     win1: 0,
+//     lost1: 0,
+//     tie1: 0,
+// }
+
 document.querySelector("#win1").innerText = score.win1;
 document.querySelector("#lost1").innerText = score.lost1;
 document.querySelector("#tie1").innerText = score.tie1;
 
-// THIS IS SCORE2 OBJECT FOR MEJORMENT THE SCORE //Game Second
-let score2 = {
+
+
+let scoreStr2 = localStorage.getItem("Score2");
+let score2 = JSON.parse(scoreStr2) || {
     win2: 0,
     lost2: 0,
     tie2: 0,
 }
+
+// THIS IS SCORE2 OBJECT FOR MEJORMENT THE SCORE //Game Second
+// let score2 = {
+//     win2: 0,
+//     lost2: 0,
+//     tie2: 0,
+// }
 
 document.querySelector("#win2").innerText = score2.win2;
 document.querySelector("#lost2").innerText = score2.lost2;
@@ -57,17 +73,23 @@ let rock = () => {
     // ==============================
     if (computerChoice1 === 'Rock') {
         score.tie1++;
+        localStorage.setItem("Score", JSON.stringify(score));
+
         document.querySelector("#finelResult1").innerText = "Match Drow";
         document.querySelector("#tie1").innerText = score.tie1;
     }
 
     else if (computerChoice1 === 'Paper') {
         score.lost1++;
+        localStorage.setItem("Score", JSON.stringify(score));
+
         document.querySelector("#finelResult1").innerText = "Coumputer Has Won";
         document.querySelector("#lost1").innerText = score.lost1;
     }
     else if (computerChoice1 === 'Scissor') {
         score.win1++;
+        localStorage.setItem("Score", JSON.stringify(score));
+
         document.querySelector("#finelResult1").innerText = "User Won";
         document.querySelector("#win1").innerText = score.win1;
     }
@@ -82,17 +104,23 @@ let paper = () => {
     // ==============================
     if (computerChoice1 === 'Rock') {
         score.win1++;
+        localStorage.setItem("Score", JSON.stringify(score));
+
         document.querySelector("#finelResult1").innerText = "User Won";
         document.querySelector("#win1").innerText = score.win1;
     }
 
     else if (computerChoice1 === 'Paper') {
         score.tie1++;
+        localStorage.setItem("Score", JSON.stringify(score));
+
         document.querySelector("#finelResult1").innerText = "Match Drow";
         document.querySelector("#tie1").innerText = score.tie1;
     }
     else if (computerChoice1 === 'Scissor') {
         score.lost1++;
+        localStorage.setItem("Score", JSON.stringify(score));
+
         document.querySelector("#finelResult1").innerText = "Coumputer Has Won";
         document.querySelector("#lost1").innerText = score.lost1;
     }
@@ -109,17 +137,23 @@ let scissor = () => {
     // ==============================
     if (computerChoice1 === 'Rock') {
         score.lost1++;
+        localStorage.setItem("Score", JSON.stringify(score));
+
         document.querySelector("#finelResult1").innerText = "Coumputer Has Won";
         document.querySelector("#lost1").innerText = score.lost1;
     }
 
     else if (computerChoice1 === 'Paper') {
         score.win1++;
+        localStorage.setItem("Score", JSON.stringify(score));
+
         document.querySelector("#finelResult1").innerText = "User Won";
         document.querySelector("#win1").innerText = score.win1;
     }
     else if (computerChoice1 === 'Scissor') {
         score.tie1++;
+        localStorage.setItem("Score", JSON.stringify(score));
+
         document.querySelector("#finelResult1").innerText = "Match Drow";
         document.querySelector("#tie1").innerText = score.tie1;
     }
@@ -161,18 +195,24 @@ let bat = () => {
     // ==============================
     if (computerChoice2 === 'Bat') {
         score2.tie2++;
+        localStorage.setItem("Score2", JSON.stringify(score2));
+
         document.querySelector("#finelResult2").innerText = "Match Tie";
         document.querySelector("#tie2").innerText = score2.tie2;
     }
 
     else if (computerChoice2 === 'Ball') {
         score2.win2++;
+        localStorage.setItem("Score2", JSON.stringify(score2));
+
         document.querySelector("#finelResult2").innerText = "User Won";
         document.querySelector("#win2").innerText = score2.win2;
 
     }
     else if (computerChoice2 === 'Stump') {
         score2.lost2++;
+        localStorage.setItem("Score2", JSON.stringify(score2));
+
         document.querySelector("#finelResult2").innerText = "Coumputer Has Won";
         document.querySelector("#lost2").innerText = score2.lost2;
     }
@@ -198,17 +238,23 @@ let ball = () => {
     // ==============================
     if (computerChoice2 === 'Bat') {
         score2.lost2++;
+        localStorage.setItem("Score2", JSON.stringify(score2));
+
         document.querySelector("#finelResult2").innerText = "Coumputer Has Won";
         document.querySelector("#lost2").innerText = score2.lost2;
     }
 
     else if (computerChoice2 === 'Ball') {
         score2.tie2++;
+        localStorage.setItem("Score2", JSON.stringify(score2));
+
         document.querySelector("#finelResult2").innerText = "Match Tie";
         document.querySelector("#tie2").innerText = score2.tie2;
     }
     else if (computerChoice2 === 'Stump') {
         score2.win2++;
+        localStorage.setItem("Score2", JSON.stringify(score2));
+
         document.querySelector("#finelResult2").innerText = "User Won";
         document.querySelector("#win2").innerText = score2.win2;
     }
@@ -234,17 +280,23 @@ let stump = () => {
     // ==============================
     if (computerChoice2 === 'Bat') {
         score2.win2++;
+        localStorage.setItem("Score2", JSON.stringify(score2));
+
         document.querySelector("#finelResult2").innerText = "User Won";
         document.querySelector("#win2").innerText = score2.win2;
     }
 
     else if (computerChoice2 === 'Ball') {
         score2.lost2++;
+        localStorage.setItem("Score2", JSON.stringify(score2));
+
         document.querySelector("#finelResult2").innerText = "Coumputer Has Won";
         document.querySelector("#lost2").innerText = score2.lost2;
     }
     else if (computerChoice2 === 'Stump') {
         score2.tie2++;
+        localStorage.setItem("Score2", JSON.stringify(score2));
+
         document.querySelector("#finelResult2").innerText = "Match Tie";
         document.querySelector("#tie2").innerText = score2.tie2;
     }
@@ -252,3 +304,15 @@ let stump = () => {
 // Game Cricket End=========================================================================================
 
 
+
+
+// Score In localStorage START =========================================
+let resetScore1 = () => {
+    localStorage.removeItem("Score"), window.location.reload();
+}
+
+let resetScore2 = () => {
+    localStorage.removeItem("Score2"), window.location.reload();
+}
+
+// Score In localStorage END =========================================
